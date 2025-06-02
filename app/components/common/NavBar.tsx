@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import {
@@ -6,13 +8,16 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import "@/app/globals.css";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "Courses", href: "#", current: false },
-  { name: "Student's Corner", href: "#", current: false },
-  { name: "Registration", href: "#", current: false },
-  { name: "Career", href: "#", current: false },
+  { name: "Home", href: "/" },
+  { name: "Courses", href: "#" },
+  { name: "Student's Corner", href: "#" },
+  { name: "Registration", href: "#" },
+  { name: "Career", href: "#" },
 ];
 
 function classNames(...classes: any[]) {
@@ -20,6 +25,8 @@ function classNames(...classes: any[]) {
 }
 
 const NavBar = () => {
+  const pathname = usePathname();
+
   return (
     <Disclosure as="nav">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -54,24 +61,24 @@ const NavBar = () => {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-3">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
-                    aria-current={item.current ? "page" : undefined}
+                    aria-current={item.href == pathname ? "page" : undefined}
                     className={classNames(
-                      item.current ? "bg-[var(--hover)] rounded" : "",
+                      item.href == pathname ? "bg-[var(--hover)] rounded" : "",
                       " text-sm px-3.5 py-2.5"
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button className="bg-[var(--theme)] text-white text-sm px-5 py-2 rounded">
-              Login
+              <Link href="/login">Login</Link>
             </button>
           </div>
         </div>
@@ -84,9 +91,9 @@ const NavBar = () => {
               key={item.name}
               as="a"
               href={item.href}
-              aria-current={item.current ? "page" : undefined}
+              aria-current={item.href == pathname ? "page" : undefined}
               className={classNames(
-                item.current ? "bg-[var(--hover)] rounded w-full" : "",
+                item.href == pathname ? "bg-[var(--hover)] rounded w-full" : "",
                 " text-sm px-3.5 py-2.5"
               )}
             >

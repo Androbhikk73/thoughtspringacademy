@@ -9,9 +9,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-white drop-shadow-2xl pt-10">
+    <footer className="bg-white drop-shadow-2xl pt-10 bottom-0  left-0 w-full">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 bg-white">
-        <div className="bg-[var(--theme)] p-1.5 rounded w-fit">
+        {/* <div className="bg-[var(--theme)] p-1.5 rounded w-fit">
           <Image
             alt="Thought Spring Academy"
             src={`/assets/logo.png`}
@@ -19,7 +19,7 @@ const Footer = () => {
             height={40}
             className="w-9 h-9"
           />
-        </div>
+        </div> */}
         <div className="grid grid-cols-2 gap-6">
           <div className="space-y-4 py-8">
             <div className="block sm:flex items-center space-x-2">
@@ -74,7 +74,7 @@ const Footer = () => {
           </h6>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
