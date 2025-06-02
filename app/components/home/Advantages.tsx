@@ -37,7 +37,7 @@ const Advantages = () => {
   return (
     <div className="mx-1 md:mx-6 px-6 md:px-8 py-10">
       <div className="max-w-7xl space-y-2 pb-4">
-        <h6 className="text-3xl font-semibold">Advantages</h6>
+        <h6 className="text-3xl font-semibold">Advantages with us</h6>
         <p className="text-sm">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
           minima quia consequuntur, in voluptas necessitatibus odit est neque
