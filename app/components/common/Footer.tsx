@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full border-t border-t-slate-200 pt-10 pb-6 text-center">
-          <h6 className="text-md font-semibold">
+          <h6 className="text-xs">
             &copy; 2025 Thought Spring Academy. All rights reserved.
           </h6>
         </div>

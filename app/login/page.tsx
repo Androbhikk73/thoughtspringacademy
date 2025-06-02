@@ -11,7 +11,7 @@ const Login = () => {
   const router = useRouter();
 
   const loginAdmin = () => {
-    router.push("/dashboard");
+    router.replace("/");
   };
 
   return (

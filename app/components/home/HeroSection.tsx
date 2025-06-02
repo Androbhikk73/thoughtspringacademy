@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const HeroSection = () => {
+  const router = useRouter();
+
   return (
     <div className="w-full py-18 flex flex-1 justify-center items-center text-center">
       <div className="my-6 py-0 md:py-4 relative">
@@ -42,7 +47,10 @@ const HeroSection = () => {
           </h6>
         </div>
 
-        <button className="bg-[var(--theme)] text-white text-sm px-5 py-2 rounded">
+        <button
+          className="bg-[var(--theme)] text-white text-sm px-5 py-2 rounded cursor-pointer"
+          onClick={() => router.push("/courses")}
+        >
           Explore Courses
         </button>
       </div>
