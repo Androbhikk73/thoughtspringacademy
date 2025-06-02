@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
         <div className="grid grid-cols-2 gap-6">
           <div className="space-y-4 py-8">
-            <div className="flex items-center space-x-2">
+            <div className="block sm:flex items-center space-x-2">
               <EnvelopeIcon aria-hidden="true" className="block size-5" />
               <h6 className="text-sm">
                 <Link href="mailto:hello@thoughtspringacademy.com">
@@ -30,14 +30,14 @@ const Footer = () => {
                 </Link>
               </h6>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="block sm:flex items-center space-x-2">
               <PhoneIcon aria-hidden="true" className="block size-5" />
 
               <h6 className="text-sm">
                 <Link href="tel:0000000000">+91 0000000000</Link>
               </h6>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="block sm:flex items-center space-x-2">
               <MapPinIcon aria-hidden="true" className="block size-5" />
               <h6 className="text-sm cursor-pointer">
                 Bansdroni, Kolkata, India

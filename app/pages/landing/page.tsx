@@ -7,6 +7,7 @@ import Goals from "@/app/components/home/Goals";
 import HeroSection from "@/app/components/home/HeroSection";
 import NavBar from "@/app/components/common/NavBar";
 import Footer from "@/app/components/common/Footer";
+import Contact from "../../components/home/Contact";
 
 const Landing = () => {
   return (
@@ -17,6 +18,7 @@ const Landing = () => {
       <Achievements />
       <Courses />
       <Goals />
+      <Contact />
       <Advantages />
       <Footer />
     </>
