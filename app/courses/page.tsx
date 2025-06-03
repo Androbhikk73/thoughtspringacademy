@@ -194,7 +194,7 @@ const Courses = () => {
     <>
       <NavBar />
       <div className="w-full px-8 pt-24 pb-14 border-b border-b-slate-200">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mx-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:mx-10 items-center">
           <div className="col-span-1 md:max-w-xl">
             <h6 className="text-2xl font-semibold">
               Online Courses on Chartered Account and Commerce
@@ -211,7 +211,7 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      <div className="py-12 px-8 space-y-6 grid grid-cols-2 gap-4">
+      <div className="py-12 px-8 space-y-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
         {courseList.map((course, index) => (
           <div
             key={index}

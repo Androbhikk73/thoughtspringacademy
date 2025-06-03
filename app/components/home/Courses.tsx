@@ -54,20 +54,20 @@ const Courses = () => {
       <div className="pt-3 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {courses.map((course, index) => (
           <div
-            className="flex shadow-lg border-t border-r border-t-slate-200 border-r-slate-200 rounded-md "
+            className="block md:flex shadow-lg border-t border-r border-t-slate-200 border-r-slate-200 rounded-md "
             key={index}
           >
-            <div className="flex-none w-48 relative">
+            <div className="md:flex-none md:w-48 relative">
               <Image
                 alt={course.title}
                 src={`/assets/courses/${course.thumbnail}`}
                 width={50}
                 height={50}
-                className="absolute inset-0 w-full h-full object-cover rounded-l-md"
+                className="md:absolute inset-0 w-full h-full object-cover md:rounded-l-md"
                 unoptimized
               />
             </div>
-            <div className="flex-auto p-6 space-y-3.5">
+            <div className="flex-auto p-3.5 md:p-6 space-y-3.5">
               <h1 className="flex-auto text-xl font-semibold text-wrap">
                 {course.title}
               </h1>

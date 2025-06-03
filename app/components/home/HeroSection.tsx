@@ -32,8 +32,10 @@ const HeroSection = () => {
               />
             </div>
           </>
-          <h6 className="text-xl md:text-3xl font-semibold">
-            <span className="text-[var(--theme)] px-3">Unlock</span>
+          <h6 className="text-md md:text-3xl font-semibold">
+            <span className="text-[var(--theme)] pl-3 pr-2 md:px-3">
+              Unlock
+            </span>
             Your Creative Potential
           </h6>
         </div>

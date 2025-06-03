@@ -20,7 +20,7 @@ const Login = () => {
       <div className="min-h-[calc(70vh-10px)]">
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-14 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <div className="flex justify-center items-center">
+            <div className="hidden md:flex justify-center items-center">
               <div className="bg-[var(--theme)] p-1.5 rounded mx-auto w-fit">
                 <Image
                   alt="Thought Spring Academy"

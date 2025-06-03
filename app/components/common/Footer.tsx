@@ -20,31 +20,8 @@ const Footer = () => {
             className="w-9 h-9"
           />
         </div> */}
-        <div className="grid grid-cols-2 gap-6">
-          <div className="space-y-4 py-8">
-            <div className="block sm:flex items-center space-x-2">
-              <EnvelopeIcon aria-hidden="true" className="block size-5" />
-              <h6 className="text-sm">
-                <Link href="mailto:hello@thoughtspringacademy.com">
-                  hello@thoughtspringacademy.com
-                </Link>
-              </h6>
-            </div>
-            <div className="block sm:flex items-center space-x-2">
-              <PhoneIcon aria-hidden="true" className="block size-5" />
-
-              <h6 className="text-sm">
-                <Link href="tel:0000000000">+91 0000000000</Link>
-              </h6>
-            </div>
-            <div className="block sm:flex items-center space-x-2">
-              <MapPinIcon aria-hidden="true" className="block size-5" />
-              <h6 className="text-sm cursor-pointer">
-                Bansdroni, Kolkata, India
-              </h6>
-            </div>
-          </div>
-          <div>
+        <div className="block md:grid grid-cols-2 gap-6">
+          <div className="order-first px-4 md:px-0 md:order-last">
             <h6 className="pb-3 font-semibold">Social Profiles</h6>
             <div className="flex space-x-3">
               <Link href="">
@@ -65,6 +42,29 @@ const Footer = () => {
                   className="w-9 h-9"
                 />
               </Link>
+            </div>
+          </div>
+          <div className="space-y-4 py-8 px-4 md:px-0">
+            <div className="block sm:flex items-center space-x-2">
+              <EnvelopeIcon aria-hidden="true" className="block size-5" />
+              <h6 className="text-sm">
+                <Link href="mailto:hello@thoughtspringacademy.com">
+                  hello@thoughtspringacademy.com
+                </Link>
+              </h6>
+            </div>
+            <div className="block sm:flex items-center space-x-2">
+              <PhoneIcon aria-hidden="true" className="block size-5" />
+
+              <h6 className="text-sm">
+                <Link href="tel:0000000000">+91 0000000000</Link>
+              </h6>
+            </div>
+            <div className="block sm:flex items-center space-x-2">
+              <MapPinIcon aria-hidden="true" className="block size-5" />
+              <h6 className="text-sm cursor-pointer">
+                Bansdroni, Kolkata, India
+              </h6>
             </div>
           </div>
         </div>

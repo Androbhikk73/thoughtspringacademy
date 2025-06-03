@@ -90,7 +90,7 @@ const NavBar = () => {
         </div>
 
         <DisclosurePanel className="sm:hidden">
-          <div className="space-y-1 px-2 py-4 rounded-bl-2xl rounded-br-2xl shadow-2xl">
+          <div className="space-y-1 px-2 py-4 rounded-bl-2xl rounded-br-2xl shadow-2xl w-full grid">
             {navigation.map((item) => (
               <DisclosureButton
                 key={item.name}

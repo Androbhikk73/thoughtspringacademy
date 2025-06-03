@@ -4,7 +4,7 @@ import React from "react";
 const Container = () => {
   return (
     <div className="w-full mx-auto max-w-7xl pt-6 pb-10">
-      <div>
+      <div className="px-2 sm:px-0">
         <Image
           alt="Thought Spring Academy Container"
           src={`/assets/container.png`}
