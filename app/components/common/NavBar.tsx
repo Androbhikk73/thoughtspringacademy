@@ -81,10 +81,12 @@ const NavBar = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button className="bg-[var(--theme)] text-white text-sm px-5 py-2 rounded">
-                <Link href="/login">Login</Link>
-              </button>
+            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 cursor-pointer">
+              <Link href="/login">
+                <button className="bg-[var(--theme)] text-white text-sm px-5 py-2 rounded">
+                  Login
+                </button>
+              </Link>
             </div>
           </div>
         </div>
