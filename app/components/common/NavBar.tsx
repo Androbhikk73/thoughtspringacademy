@@ -1,11 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
 } from "@headlessui/react";
 import { Bars2Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "@/app/globals.css";
@@ -16,8 +20,13 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Courses", href: "/courses" },
   { name: "Student's Corner", href: "#" },
-  { name: "Registration", href: "#" },
+  { name: "Registration", href: "/registration" },
   { name: "Career", href: "#" },
+];
+
+const userNavigation = [
+  { name: "Dashboard", href: "/dashboard" },
+  { name: "Sign out", href: "#" },
 ];
 
 function classNames(...classes: any[]) {
@@ -26,6 +35,7 @@ function classNames(...classes: any[]) {
 
 const NavBar = () => {
   const pathname = usePathname();
+  const [logged, setLogged] = useState(false);
 
   return (
     <div className="bg-white w-full">
@@ -82,11 +92,44 @@ const NavBar = () => {
               </div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 cursor-pointer">
-              <Link href="/login">
-                <button className="bg-[var(--theme)] text-white text-sm px-5 py-2 rounded">
-                  Login
-                </button>
-              </Link>
+              {logged ? (
+                <Menu as="div" className="relative ml-3">
+                  <div>
+                    <MenuButton className="relative flex rounded-full text-sm  cursor-pointer">
+                      <span className="absolute -inset-1.5" />
+                      <span className="sr-only">Open user menu</span>
+                      <Image
+                        alt="profile"
+                        src={`/assets/profile.png`}
+                        width={32}
+                        height={32}
+                        className="size-8 rounded-full border border-black"
+                      />
+                    </MenuButton>
+                  </div>
+                  <MenuItems
+                    transition
+                    className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+                  >
+                    {userNavigation.map((item) => (
+                      <MenuItem key={item.name}>
+                        <Link
+                          href={item.href}
+                          className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
+                        >
+                          {item.name}
+                        </Link>
+                      </MenuItem>
+                    ))}
+                  </MenuItems>
+                </Menu>
+              ) : (
+                <Link href="/login">
+                  <button className="bg-[var(--theme)] text-white text-sm px-5 py-2 rounded">
+                    Login
+                  </button>
+                </Link>
+              )}
             </div>
           </div>
         </div>

@@ -7,6 +7,9 @@ type InputProps = {
   placeholder: string;
 };
 
+export const classes =
+  "block w-full rounded-md bg-white outline outline-gray-300 px-3 py-1.5 text-xs text-gray-900 -outline-offset-1 placeholder:text-gray-400 placeholder:text-xs focus:outline-1 focus:-outline-offset-2 focus:outline-[var(--theme)] sm:text-sm/6";
+
 const Input = ({ id, name, type, placeholder }: InputProps) => {
   return (
     <>
@@ -17,7 +20,7 @@ const Input = ({ id, name, type, placeholder }: InputProps) => {
           autoComplete="off"
           placeholder={placeholder}
           rows={4}
-          className="block w-full rounded-md bg-gray-50 outline outline-gray-200 px-3 py-1.5 text-xs text-gray-900 -outline-offset-1 placeholder:text-gray-400 placeholder:text-xs focus:outline-1 focus:-outline-offset-2 focus:outline-[var(--theme)] sm:text-sm/6"
+          className={classes}
         ></textarea>
       ) : (
         <input
@@ -26,7 +29,7 @@ const Input = ({ id, name, type, placeholder }: InputProps) => {
           type={type}
           autoComplete="off"
           placeholder={placeholder}
-          className="block w-full rounded-md bg-gray-50 outline outline-gray-200 px-3 py-2.5 md:py-1.5 text-xs text-gray-900 -outline-offset-1 placeholder:text-gray-400 placeholder:text-xs focus:outline-1 focus:-outline-offset-2 focus:outline-[var(--theme)] sm:text-sm/6"
+          className={classes}
         />
       )}
     </>
